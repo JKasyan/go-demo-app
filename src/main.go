@@ -112,6 +112,7 @@ func main() {
 		case "/img":
 			img(ctx)
 		case "/hello":
+			fmt.Println("simple test log for checking github actions")
 			ctx.Write([]byte("hello world"))
 		default:
 			ctx.Error("not found", fasthttp.StatusNotFound)
