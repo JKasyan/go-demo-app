@@ -112,8 +112,6 @@ func main() {
 			//		readinez.HandlerFunc(ctx)
 		case "/img":
 			img(ctx)
-		case "/hello":
-			ctx.WriteString("HELLO WORLD!")
 		default:
 			ctx.Error("not found", fasthttp.StatusNotFound)
 		}
