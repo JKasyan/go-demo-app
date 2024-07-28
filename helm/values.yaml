@@ -4,7 +4,7 @@ app:
   port: 80
 image:
   name: ekasyan/go-demo-app
-  tag: build-927b6eb
+  tag: build-664f024
 front:
   version: 3.0.1
   replicas: 1
