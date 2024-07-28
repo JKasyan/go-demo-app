@@ -100,6 +100,7 @@ func main() {
 
 	// the corresponding fasthttp code
 	router := func(ctx *fasthttp.RequestCtx) {
+		fmt.Printf("Path: %s\n", ctx.Path())
 		switch string(ctx.Path()) {
 		case "/":
 			img(ctx)
@@ -111,6 +112,8 @@ func main() {
 			//		readinez.HandlerFunc(ctx)
 		case "/img":
 			img(ctx)
+		case "/hello":
+			ctx.WriteString("HELLO WORLD!")
 		default:
 			ctx.Error("not found", fasthttp.StatusNotFound)
 		}
