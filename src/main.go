@@ -111,11 +111,6 @@ func main() {
 			//		readinez.HandlerFunc(ctx)
 		case "/img":
 			img(ctx)
-		case "/hello1":
-			fmt.Println("simple test log for checking github actions")
-			ctx.Write([]byte("hello world"))
-		case "/desc":
-			ctx.Write([]byte("Some description of App"))
 		default:
 			ctx.Error("not found", fasthttp.StatusNotFound)
 		}
